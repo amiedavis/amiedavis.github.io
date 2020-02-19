@@ -2,4 +2,4 @@
 ### created by Amie Davis
 
 
-Please visit the site at amiedavis.github.io
+Please visit the site [here](amiedavis.github.io)
