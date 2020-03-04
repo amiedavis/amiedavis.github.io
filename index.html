@@ -1,7 +1,95 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+  <head>
+    <script src="external_libs/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+      integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script type="text/javascript">
+      //This opens a new window with the entire page displayed. However, the form isn't filled
+      document.addEventListener('DOMContentLoaded', function(){ 
+          html2canvas(document.body).then(
+            function(canvas) {
+              newwin = window.open("");
+              newwin.document.body.appendChild(canvas);
+            });
+      }, false);
+    </script> -->
+    <script type="text/javascript">
+    
+      function myPrint(myfrm) {
+        // This solution just opens the form in a new window and prints, but doens't include input data
+            // var printdata = document.getElementById(myfrm);
+            // newwin = window.open("");
+            // newwin.document.write(printdata.outerHTML);
+            // newwin.print();
+            // newwin.close();
+
+        // THis is the solution I want to use - screen capture and print - but not working
+        // const filename = "ThisIsYourPDFFilename.pdf";
+        // html2canvas(document.querySelector("#capture")).then(
+        //   function(canvas) {
+        //     // var doc = new jsPDF("p", "mm", "a4");
+        //     // pdf.addImage(canvas.toDataURL("image/png"), "PNG", 0, 0, 211, 298);
+        //     // pdf.save(filename);
+        //     // document.body.appendChild(canvas);
+
+        //     alert("got here!");
+        //     // newwin = window.open("");
+        //     // newwin.appendChild(canvas);
+        //   },
+        //   function(e) {
+        //     alert("failed");
+        //   }
+        // );
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="website-title">
+      You Got This! <i class="fas fa-fist-raised"></i>
+    </h1>
+    <div class="info" id="ignore-in-pdf">
+      <h2>What is Self-Advocacy?</h2>
+    </div>
+    <div class="worksheet" id="capture">
+      <h2>Self-Advocacy Worksheet</h2>
+      <form id="myfrm" onsubmit="myPrint(myfrm)">
+        <label for="what">What do I want to change?</label>
+        <br />
+        <textarea
+          id="what"
+          placeholder="e.g. I want my psychiatrist to explain what options are available to me and the pros and cons of each option, and allow me to make the final decision."
+        ></textarea>
+        <br />
+        <label for="how">How could I go about making this change happen?</label>
+        <br />
+        <textarea
+          id="how"
+          placeholder="e.g. I could tell my psychiatrist that I want to be more involved in my treatment, and would like her to explain treatment options and allow me to make my own decisions on what is best for me."
+        ></textarea>
+        <br />
+        <label for="barriers"
+          >What could stop me from making this happen?</label
+        >
+        <br />
+        <textarea
+          id="barriers"
+          placeholder="e.g. I am anxious about talking to my psychiatrist about this. I feel like she won't listen to me and that she thinks that she knows what's best for me. I don't think she has confidence in my ability to make decisions about my treatment."
+        ></textarea>
+        <br />
+        <label for="support">Who could help me?</label>
+        <br />
+        <textarea
+          id="support"
+          placeholder="e.g. My friend could pretend to be my psychiatrist and we could do a practice role-play of the situation."
+        ></textarea>
+        <br />
+        <input type="submit" value="Print to PDF" />
+      </form>
+    </div>
+  </body>
 </html>
