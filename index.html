@@ -2,70 +2,68 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
-      integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
-    <script type="text/javascript">
-      function myPrint(myfrm) {
-        var printdata = myfrm.cloneNode(true);
-
-        var newwindow = window.open("", "printwindow");
-        newwindow.document.open();
-        newwindow.document.write(
-          '<html><head><link rel="stylesheet" type="text/css" href="style.css"></head><body></body></html>'
-        );
-        newwindow.document.body.appendChild(printdata);
-        newwindow.document.close();
-        newwindow.focus();
-        newwindow.print();
-        // newwindow.close();
-      }
-    </script>
   </head>
   <body>
-    <h1 class="website-title">
-      You Got This! <i class="fas fa-fist-raised"></i>
+    <div class="container">
+    <h1>
+      You Got This!
     </h1>
-    <div class="info" id="ignore-in-pdf">
+    <div class="info">
       <h2>What is Self-Advocacy?</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nec nam aliquam sem et. Mauris augue neque gravida in fermentum et sollicitudin ac orci. Dui sapien eget mi proin sed libero enim sed faucibus. Dignissim enim sit amet venenatis. Massa placerat duis ultricies lacus sed turpis tincidunt id. Massa id neque aliquam vestibulum morbi. Feugiat nibh sed pulvinar proin. Diam maecenas sed enim ut sem. Eget velit aliquet sagittis id consectetur purus ut. Mauris nunc congue nisi vitae suscipit. Nunc eget lorem dolor sed. Mattis rhoncus urna neque viverra justo. Amet purus gravida quis blandit. Sagittis aliquam malesuada bibendum arcu. Maecenas volutpat blandit aliquam etiam erat velit scelerisque. Id velit ut tortor pretium viverra suspendisse potenti nullam ac.</p>
     </div>
     <div class="worksheet">
       <h2>Self-Advocacy Worksheet</h2>
-      <form id="myfrm" onsubmit="myPrint(myfrm)">
-        <label for="what">What do I want to change?</label>
-        <br />
-        <textarea
-          id="what"
-          placeholder="e.g. I want my psychiatrist to explain what options are available to me and the pros and cons of each option, and allow me to make the final decision."
-        ></textarea>
-        <br />
-        <label for="how">How could I go about making this change happen?</label>
-        <br />
-        <textarea
-          id="how"
-          placeholder="e.g. I could tell my psychiatrist that I want to be more involved in my treatment, and would like her to explain treatment options and allow me to make my own decisions on what is best for me."
-        ></textarea>
-        <br />
-        <label for="barriers"
-          >What could stop me from making this happen?</label
-        >
-        <br />
-        <textarea
-          id="barriers"
-          placeholder="e.g. I am anxious about talking to my psychiatrist about this. I feel like she won't listen to me and that she thinks that she knows what's best for me. I don't think she has confidence in my ability to make decisions about my treatment."
-        ></textarea>
-        <br />
-        <label for="support">Who could help me?</label>
-        <br />
-        <textarea
-          id="support"
-          placeholder="e.g. My friend could pretend to be my psychiatrist and we could do a practice role-play of the situation."
-        ></textarea>
-        <br />
-        <input type="submit" value="Print to PDF" />
+      <form id="selfAdvocacyForm" onsubmit="window.print()">
+        <div class="form-group">
+          <label for="what">What do I want to change?</label>
+          <textarea
+            class="form-control"
+            id="what"
+            placeholder="e.g. I want my psychiatrist to explain what options are available to me and the pros and cons of each option, and allow me to make the final decision."
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="how"
+            >How could I go about making this change happen?</label>
+          <textarea
+            class="form-control"
+            id="how"
+            placeholder="e.g. I could tell my psychiatrist that I want to be more involved in my treatment, and would like her to explain treatment options and allow me to make my own decisions on what is best for me."
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="barriers"
+            >What could stop me from making this happen?</label>
+          <textarea
+            class="form-control"
+            id="barriers"
+            placeholder="e.g. I am anxious about talking to my psychiatrist about this. I feel like she won't listen to me and that she thinks that she knows what's best for me. I don't think she has confidence in my ability to make decisions about my treatment."
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="support">Who could help me?</label>
+          <br />
+          <textarea
+            class="form-control"
+            id="support"
+            placeholder="e.g. My friend could pretend to be my psychiatrist and we could do a practice role-play of the situation."
+          ></textarea>
+        </div>
+        <input type="submit" value="Print Form" />
       </form>
     </div>
   </body>
+</div>
 </html>
