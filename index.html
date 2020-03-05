@@ -1,50 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="external_libs/html2canvas.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
       integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
       crossorigin="anonymous"
     ></script>
-    <!-- <script type="text/javascript">
-      //This opens a new window with the entire page displayed. However, the form isn't filled
-      document.addEventListener('DOMContentLoaded', function(){ 
-          html2canvas(document.body).then(
-            function(canvas) {
-              newwin = window.open("");
-              newwin.document.body.appendChild(canvas);
-            });
-      }, false);
-    </script> -->
     <script type="text/javascript">
-    
       function myPrint(myfrm) {
-        // This solution just opens the form in a new window and prints, but doens't include input data
-            // var printdata = document.getElementById(myfrm);
-            // newwin = window.open("");
-            // newwin.document.write(printdata.outerHTML);
-            // newwin.print();
-            // newwin.close();
+        var printdata = myfrm.cloneNode(true);
 
-        // THis is the solution I want to use - screen capture and print - but not working
-        // const filename = "ThisIsYourPDFFilename.pdf";
-        // html2canvas(document.querySelector("#capture")).then(
-        //   function(canvas) {
-        //     // var doc = new jsPDF("p", "mm", "a4");
-        //     // pdf.addImage(canvas.toDataURL("image/png"), "PNG", 0, 0, 211, 298);
-        //     // pdf.save(filename);
-        //     // document.body.appendChild(canvas);
-
-        //     alert("got here!");
-        //     // newwin = window.open("");
-        //     // newwin.appendChild(canvas);
-        //   },
-        //   function(e) {
-        //     alert("failed");
-        //   }
-        // );
+        var newwindow = window.open("", "printwindow");
+        newwindow.document.open();
+        newwindow.document.write(
+          '<html><head><link rel="stylesheet" type="text/css" href="style.css"></head><body></body></html>'
+        );
+        newwindow.document.body.appendChild(printdata);
+        newwindow.document.close();
+        newwindow.focus();
+        newwindow.print();
+        // newwindow.close();
       }
     </script>
   </head>
@@ -55,7 +31,7 @@
     <div class="info" id="ignore-in-pdf">
       <h2>What is Self-Advocacy?</h2>
     </div>
-    <div class="worksheet" id="capture">
+    <div class="worksheet">
       <h2>Self-Advocacy Worksheet</h2>
       <form id="myfrm" onsubmit="myPrint(myfrm)">
         <label for="what">What do I want to change?</label>
