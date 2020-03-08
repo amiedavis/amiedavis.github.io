@@ -1,5 +1,24 @@
 @media print {
-     h1, input, .info {
-        display: none;
-    }
+  @page {
+    margin: 0.5cm;
+  }
+
+  h1,
+  input,
+  .info,
+  .resources {
+    display: none;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  #selfAdvocacyForm {
+    padding-top: 40px;
+  }
+}
+
+form {
+  margin-bottom: 20px;
 }
