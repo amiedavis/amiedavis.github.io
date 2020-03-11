@@ -1,91 +1,239 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Raleway&display=swap" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"/>
+      crossorigin="anonymous"
+    />
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
-    <h1 class="display-1">
-      It's Your Life!
-    </h1>
-    <h1 class="display-4">
-      Make your voice heard
-    </h1>
-    <div class="info">
-      <h2>What is Self-Advocacy?</h2>
-      <p>If you are living with a mental health condition, there might be times when you feel like decisions are being made on your behalf and without your input. However, it is your right to be involved in any decisions made about you, including your treatment, the services you access and your living arrangements. Self-advocacy is when you speak up about what you need or want.</p>
-    </div>
-    <div class="worksheet">
-      <h2>Self-Advocacy Worksheet</h2>
-      <p class="info">Standing up for yourself can be difficult, especially if you’re not used to doing it. You might think that you don’t have the skills to speak up for yourself, or you won’t be taken seriously. Sometimes it can help to write down what needs to be done so that you have a plan to follow. Below is a template that can be filled in and printed, which can help you to brainstorm some ideas to achieve what you want.</p>
-      <form id="selfAdvocacyForm" onsubmit="window.print()">
-        <div class="form-group">
-          <label for="what">What do I want to change?</label>
-          <textarea
-            class="form-control"
-            id="what"
-            placeholder="e.g. I want my psychiatrist to explain what options are available to me and the pros and cons of each option, and allow me to make the final decision."
-          ></textarea>
+      <!-- <div class="col-3">
+          <div class="row">
+            <img src="images/1.jpg" class="img-fluid" alt="Responsive image" />
+            <img src="images/2.jpg" class="img-fluid" alt="Responsive image" />
+            <img src="images/3.jpg" class="img-fluid" alt="Responsive image" />
+            <img src="images/4.jpg" class="img-fluid" alt="Responsive image" />
+            <img src="images/5.jpg" class="img-fluid" alt="Responsive image" />
+          </div>
+        </div> -->
+      <div class="title">
+        <h1 class="display-1">
+          It's Your Life!
+        </h1>
+        <h4>
+          Make your voice heard
+        </h4>
+      </div>
+      <div class="info">
+        <h4>What is Self-Advocacy?</h4>
+        <p>
+          If you are living with a mental health condition, there might be times when you feel like decisions are being
+          made on your behalf and without your input. However, it is your right to be involved in any decisions made
+          about you, including (but not limited to) your medical treatment, the services you access and your living
+          arrangements. Self-advocacy is when you speak up about what you want or need, to ensure that you are able to
+          live the life you want.
+        </p>
+        <h4>Overcoming Barriers</h4>
+        <p class="info">
+          Standing up for yourself can be difficult, especially if you’re not used to doing it. You might think that you
+          don’t have the confidence to speak up for yourself, or you won’t be taken seriously. Some other barriers
+          people face are:
+        </p>
+
+        <ul>
+          <li>Not knowing what your rights are;</li>
+          <li>Lacking the skills or resources that are required to fix a problem; or</li>
+          <li>Being too unwell to express your wishes or needs.</li>
+        </ul>
+
+        <h5>Knowing Your Rights</h5>
+        <p class="info">
+          Knowing your rights can help you to recognise when you are not being treated appropriately and stand up for
+          yourself. For example, in Australia, treatment options available for your mental health condition must be
+          explained to you so that you can make an informed decision about your own recovery. Even if you are receiving
+          involuntary treatment, you have a right to have your treatment explained to you and for your wishes to be
+          taken into account. For more information, refer to the Mental Health Act plain language guides for each
+          Australian state and territory below.
+        </p>
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              href="https://health.act.gov.au/sites/default/files/2018-09/Plain%20Language%20Guide_MH%20ACT.pdf"
+              >Canberra - The Plain Language Guide for the Mental Health Act 2015</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.heti.nsw.gov.au/__data/assets/pdf_file/0009/457983/Mental-Health-Act_2007_Guide-Book_6th-edition-2019-published-07.08.2019.pdf"
+              >NSW Mental Health Act (2007) no. 8 Guide Book</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.legalaid.vic.gov.au/information-for-lawyers/practice-resources/mental-health-law/introduction-to-mental-health-act-2014"
+              >Victoria - Introduction to the Mental Health Act 2014</a
+            >
+          </li>
+          <li>
+            <a target="_blank" href="https://www.health.qld.gov.au/__data/assets/pdf_file/0031/444856/guide-to-mha.pdf"
+              >Queensland - A Guide to the Mental Health Act 2016
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.adelaide.edu.au/legalandrisk/system/files/media/documents/2019-01/Mental_Health_Act_Plain_Language_Guide.pdf"
+              >SA - Plain Language Guide to the Mental Health Act 2009</a
+            >
+          </li>
+
+          <li>
+            <a
+              target="_blank"
+              href="https://www.mhc.wa.gov.au/media/1437/consumer-handbook-to-the-mental-health-act-2014-version-2-1.pdf"
+              >WA - Consumer Handbook to the Mental Health Act 2014</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://digitallibrary.health.nt.gov.au/dspace/bitstream/10137/332/1/Consumers%20Guides%20to%20the%20Mental%20Health%20and%20Related%20Services%20Act.pdf"
+              >NT - A Consumer's Guide to the Mental Health and Related Services Act</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="http://www.dhhs.tas.gov.au/mentalhealth/mental_health_act/mental_health_act_resources/an_overview_of_the_mental_health_act_2013"
+              >Tasmania - An overview of the Mental Health Act 2013</a
+            >
+          </li>
+        </ul>
+        <h5>Getting Support</h5>
+        <p>
+          Sometimes, we simply can’t solve a problem on our own. Asking for help is a sign of strength and is a
+          proactive way to take control in your recovery. There are many sources of help, including:
+        </p>
+        <ul>
+          <li>Family and friends</li>
+          <li>Community mental health teams</li>
+          <li>Psychologists/Social workers</li>
+          <li>Your GP</li>
+          <li>Financial advisors</li>
+          <li>LegalAid</li>
+          <li>Community organisations</li>
+        </ul>
+        <p>
+          Sometimes you can even ask for help from the person or organisation you need to stand up to. For example, if
+          you received a late fee for a phone bill that you were unable to pay due to being unwell, you may find that a
+          simple call to the phone company to explain your situation is enough to have your fee waived.
+        </p>
+        <p>
+          If you don’t know where to go for support, there are organisations in each state and territory that
+          specifically help people with advocacy issues. Refer to the Resources section for a list of some organisations
+          in Australia.
+        </p>
+      </div>
+      <div class="worksheet">
+        <h4>Self-Advocacy Worksheet</h4>
+        <div class="info">
+          <p>
+            Sometimes it can help to write down what needs to be done so that you have a plan to follow. Below is a
+            template that can be filled in and printed, which can help you to brainstorm some ideas to achieve what you
+            want.
+          </p>
         </div>
-        <div class="form-group">
-          <label for="how"
-            >How could I go about making this change happen?</label>
-          <textarea
-            class="form-control"
-            id="how"
-            placeholder="e.g. I could tell my psychiatrist that I want to be more involved in my treatment, and would like her to explain treatment options and allow me to make my own decisions on what is best for me."
-          ></textarea>
-        </div>
-        <div class="form-group">
-          <label for="barriers"
-            >What could stop me from making this happen?</label>
-          <textarea
-            class="form-control"
-            id="barriers"
-            placeholder="e.g. I am anxious about talking to my psychiatrist about this. I feel like she won't listen to me and that she thinks that she knows what's best for me. I don't think she has confidence in my ability to make decisions about my treatment."
-          ></textarea>
-        </div>
-        <div class="form-group">
-          <label for="support">Who could help me?</label>
-          <br />
-          <textarea
-            class="form-control"
-            id="support"
-            placeholder="e.g. My friend could pretend to be my psychiatrist and we could do a practice role-play of the situation."
-          ></textarea>
-        </div>
-        <input type="submit" value="Print Form"/>
-      </form>
-    </div>
-    <div class="resources">
-      <h2>Resources</h2>
-      <ul>
-        <li><a target="_blank" href="https://www1.health.gov.au/internet/publications/publishing.nsf/Content/pub-sqps-rights-toc">Australian Government Mental health statement of rights and responsibilities</a></li>
-        <li><a target="_blank" href="https://headtohealth.gov.au/">Head To Health digital mental health resources</a></li>
-        <li><a target="_blank" href="https://www.health.nsw.gov.au/mentalhealth/participation/pages/groups.aspx">NSW - Mental Health Organisations and Advocacy Groups</a></li>
-        <li><a target="_blank" href="https://www.sahealth.sa.gov.au/wps/wcm/connect/Public+Content/SA+Health+Internet/Health+services/Mental+health+services/">SA - Support, Advocacy and Complaints Services</a></li>
-        <li><a target="_blank" href="https://www.adelaide.edu.au/legalandrisk/system/files/media/documents/2019-01/Mental_Health_Act_Plain_Language_Guide.pdf">SA - Plain Language Guide to the Mental Health Act 2009</a></li>
-        <li><a target="_blank" href="https://digitallibrary.health.nt.gov.au/dspace/bitstream/10137/332/1/Consumers%20Guides%20to%20the%20Mental%20Health%20and%20Related%20Services%20Act.pdf">NT - A Consumer's Guide to the Mental Health and Related Services Act</a></li>
-        <li><a target="_blank" href="https://mifant.org.au/index.php/component/sppagebuilder/?view=page&id=47">Mental Illness Fellowship Northern Territory (Inc)</a></li>
-        <li><a target="_blank" href="https://www2.health.vic.gov.au/mental-health/rights-and-advocacy/advocacy">Victoria - Advocacy Organisations</a></li>
-        <li><a target="_blank" href="https://www.legalaid.vic.gov.au/information-for-lawyers/practice-resources/mental-health-law/introduction-to-mental-health-act-2014">Victoria - Introduction to the Mental Health Act 2014</a></li>
-        <li><a target="_blank" href="https://mhas.wa.gov.au/">WA - Mental Health Advocacy Service</a></li>
-        <li><a target="_blank" href="https://www.mhc.wa.gov.au/media/1437/consumer-handbook-to-the-mental-health-act-2014-version-2-1.pdf">WA - Consumer Handbook to the
-          Mental Health Act 2014</a></li>
-        <li><a target="_blank" href="https://advocacytasmania.org.au/">Advocacy Tasmania</a></li>
-        <li><a target="_blank" href="http://www.dhhs.tas.gov.au/mentalhealth/mental_health_act/mental_health_act_resources/an_overview_of_the_mental_health_act_2013">Tasmania - An overview of the Mental Health Act 2013</a></li>
-        <li><a target="_blank" href="https://health.act.gov.au/sites/default/files/2018-09/Plain%20Language%20Guide_MH%20ACT.pdf">Canberra - The Plain Language Guide for the Mental Health Act 2015</a></li>
-      </ul>
+        <form class="self-advocacy-form" onsubmit="window.print()">
+          <div class="form-group">
+            <label for="what">What do I want to change?</label>
+            <textarea
+              class="form-control"
+              id="what"
+              placeholder="e.g. I want my psychiatrist to explain what options are available to me and the pros and cons of each option, and allow me to make the final decision."
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="how">How could I go about making this change happen?</label>
+            <textarea
+              class="form-control"
+              id="how"
+              placeholder="e.g. I could tell my psychiatrist that I want to be more involved in my treatment, and would like her to explain treatment options and allow me to make my own decisions on what is best for me."
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="barriers">What could stop me from making this happen?</label>
+            <textarea
+              class="form-control"
+              id="barriers"
+              placeholder="e.g. I am anxious about talking to my psychiatrist about this. I feel like she won't listen to me and that she thinks that she knows what's best for me. I don't think she has confidence in my ability to make decisions about my treatment."
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="support">Who could help me?</label>
+            <br />
+            <textarea
+              class="form-control"
+              id="support"
+              placeholder="e.g. My friend could pretend to be my psychiatrist and we could do a practice role-play of the situation."
+            ></textarea>
+          </div>
+          <input type="submit" value="Print Form" />
+        </form>
+      </div>
+      <div class="resources">
+        <h4>Resources</h4>
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              href="https://www1.health.gov.au/internet/publications/publishing.nsf/Content/pub-sqps-rights-toc"
+              >Australian Government Mental health statement of rights and responsibilities</a
+            >
+          </li>
+          <li>
+            <a target="_blank" href="https://headtohealth.gov.au/">Head To Health digital mental health resources</a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.health.nsw.gov.au/mentalhealth/participation/pages/groups.aspx"
+              >NSW - Mental Health Organisations and Advocacy Groups</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.sahealth.sa.gov.au/wps/wcm/connect/Public+Content/SA+Health+Internet/Health+services/Mental+health+services/"
+              >SA - Support, Advocacy and Complaints Services</a
+            >
+          </li>
+          <li>
+            <a target="_blank" href="https://mifant.org.au/index.php/component/sppagebuilder/?view=page&id=47"
+              >Mental Illness Fellowship Northern Territory (Inc)</a
+            >
+          </li>
+          <li>
+            <a target="_blank" href="https://www2.health.vic.gov.au/mental-health/rights-and-advocacy/advocacy"
+              >Victoria - Advocacy Organisations</a
+            >
+          </li>
+
+          <li><a target="_blank" href="https://mhas.wa.gov.au/">WA - Mental Health Advocacy Service</a></li>
+
+          <li><a target="_blank" href="https://advocacytasmania.org.au/">Advocacy Tasmania</a></li>
+        </ul>
+      </div>
     </div>
   </body>
-</div>
 </html>

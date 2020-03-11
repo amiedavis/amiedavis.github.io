@@ -3,20 +3,31 @@
     margin: 0.5cm;
   }
 
-  h1,
+  title,
   input,
   .info,
   .resources {
     display: none;
   }
 
-  h2 {
+  .self-advocacy-form h4 {
     text-align: center;
-  }
-
-  #selfAdvocacyForm {
     padding-top: 40px;
   }
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.display-1 {
+  font-family: 'Caveat', cursive;
+  text-align: center;
+}
+
+.title h4 {
+  font-family: 'Raleway', cursive;
+  text-align: center;
 }
 
 form {
