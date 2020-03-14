@@ -3,21 +3,24 @@
     margin: 0.5cm;
   }
 
-  title,
   input,
+  .title,
   .info,
   .resources {
     display: none;
   }
 
-  .self-advocacy-form h4 {
+  .worksheet h4 {
     text-align: center;
+  }
+  .worksheet.self-advocacy-form {
     padding-top: 40px;
   }
 }
 
-.title {
-  margin-bottom: 10px;
+img {
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .display-1 {
@@ -28,6 +31,15 @@
 .title h4 {
   font-family: 'Raleway', cursive;
   text-align: center;
+  color: black;
+}
+
+h4 {
+  color: steelblue;
+}
+
+h5 {
+  color: rgb(180, 151, 70);
 }
 
 form {
