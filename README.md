@@ -1,5 +1,7 @@
 # A Website Promoting Self-Advocacy
-### created by Amie Davis
 
+## Created by Amie Davis
 
-Please visit the site [here](https://amiedavis.github.io)
+This site was created as part of the course requirements for CHCMHS008 Promote and Facilitate Self-Advocacy.
+
+Please visit the site [here](https://amiedavis.github.io/selfadvocacy).
