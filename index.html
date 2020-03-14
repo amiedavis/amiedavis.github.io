@@ -10,10 +10,30 @@
       crossorigin="anonymous"
     />
     <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+
+    <script type="text/javascript">
+      function printme() {
+        $('#what').removeAttr('placeholder');
+        $('#how').removeAttr('placeholder');
+        $('#barriers').removeAttr('placeholder');
+        $('#support').removeAttr('placeholder');
+        window.print();
+      }
+    </script>
   </head>
   <body>
     <div class="container">
@@ -67,7 +87,7 @@
           <li>Psychologists/Social workers</li>
           <li>Your GP</li>
           <li>Financial advisors</li>
-          <li>LegalAid</li>
+          <li>Legal Aid</li>
           <li>Community organisations</li>
         </ul>
         <p>
@@ -80,17 +100,26 @@
           specifically help people with advocacy issues. Refer to the
           <a href="#resources-anchor">Resources</a> section for a list of some organisations in Australia.
         </p>
+        <h5>Creating an Advance Care Plan</h5>
+        <p>
+          It is possible to document your treatment preferences and/or nominate someone to make decisions on your behalf
+          in times when you are unwell. This document is called an Advance Care Plan and is a good idea for everyone,
+          not just those with a chronic illness. Information on how to write a plan and the different requirements
+          across Australia can be found on the
+          <a href="https://www.advancecareplanning.org.au/#/" target="_blank">Advance Care Planning Australia</a>
+          website.
+        </p>
       </div>
       <div class="worksheet">
         <h4>Self-Advocacy Worksheet</h4>
         <div class="info">
           <p>
-            Sometimes it can help to write down what needs to be done so that you have a plan to follow. Below is a
-            template that can be filled in and printed, which can help you to brainstorm some ideas to achieve what you
-            want.
+            Advocating for yourself can feel like a daunting task. Below is a template that can be filled in and
+            printed, with prompting questions to help you brainstorm what you want to change and how you might go about
+            doing this.
           </p>
         </div>
-        <form class="self-advocacy-form" onsubmit="window.print()">
+        <form class="self-advocacy-form">
           <div class="form-group">
             <label for="what">What do I want to change?</label>
             <textarea
@@ -124,7 +153,7 @@
               placeholder="e.g. My friend could pretend to be my psychiatrist and we could do a practice role-play of the situation."
             ></textarea>
           </div>
-          <input type="submit" value="Print Form" />
+          <input type="button" class="btn btn-outline-secondary" onClick="printme()" value="Print Form" />
         </form>
       </div>
       <div class="resources" id="resources-anchor">
@@ -276,10 +305,15 @@
           </div>
         </div>
       </div>
-      <hr />
-      <footer>
-        <p>Cover photo credit: <a href="https://unsplash.com/photos/1tFd-Bb1pxk">Dino Reichmuth</a></p>
-      </footer>
+      <div class="base">
+        <hr />
+        <footer>
+          <p>Text entered on this site is not saved or submitted anywhere, and will clear on page reload.</p>
+          <p>
+            Cover photo credit: <a href="https://unsplash.com/photos/1tFd-Bb1pxk" target="_blank">Dino Reichmuth</a>
+          </p>
+        </footer>
+      </div>
     </div>
   </body>
 </html>

@@ -4,18 +4,32 @@
   }
 
   input,
+  .base,
   .title,
   .info,
   .resources {
     display: none;
   }
 
+  .worksheet input {
+    display: none;
+  }
+
   .worksheet h4 {
     text-align: center;
+    margin-bottom: 50px;
   }
   .worksheet.self-advocacy-form {
     padding-top: 40px;
   }
+}
+
+footer p {
+  font-style: italic;
+}
+
+p {
+  text-align: justify;
 }
 
 img {
